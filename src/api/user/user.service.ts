@@ -16,7 +16,7 @@ export class UserService {
     const newUser = await UserModel.create(user);
 
     await UserIdentityModel.create({
-      provider: 'local',
+      // provider: 'local',
       user: newUser._id,
       credentials: {
         username: credentials.username,

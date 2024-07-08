@@ -2,6 +2,9 @@ const nodemailer = require('nodemailer');
  
 export async function sendResetEmail(email) {
   const transporter = nodemailer.createTransport({
+    // host: 'zimbra.vdp.it',
+    // port: 25,
+    // secure: false
     service: 'gmail',
     auth: {
       user: 'vdp.fonderia.schio@gmail.com',
@@ -10,7 +13,7 @@ export async function sendResetEmail(email) {
   });
 
   const mailOptions = {
-    from: 'vdp.fonderia.schio@gmail.com',
+    from: 'zimbra.vdp.it',
     to: email,
     subject: 'Appointment',
     html: `
